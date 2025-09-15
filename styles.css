@@ -1,0 +1,318 @@
+/* =========================
+   Neo–SciFi Theme (v2)
+   - vibe เดิม, code ใหม่
+   - ตารางคงเดิม
+   ========================= */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Oswald:wght@400;700&display=swap');
+
+/* Design Tokens */
+:root{
+  --bg-1:#141725;
+  --bg-2:#1c2032;
+  --card:#20253a;
+  --ink:#e6e9f6;
+  --muted:#b8c4ee;
+  --primary:#6a84ff;
+  --primary-2:#3a4bbf;
+  --line:#4153a8;
+  --shadow: 0 10px 30px rgba(58,75,191,.25);
+  --radius: 14px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin: 0;
+  padding: 20px;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 800px at 10% -10%, #28305622 0%, transparent 60%),
+    radial-gradient(1200px 800px at 110% 20%, #3a4bbf14 0%, transparent 60%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  font-family: 'Rajdhani', system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  letter-spacing:.2px;
+  animation: bodyEnter .7s ease-out both;
+}
+
+@keyframes bodyEnter{
+  from{opacity:0; transform: translateY(8px)}
+  to{opacity:1; transform: translateY(0)}
+}
+
+/* Headings */
+h1, h3{
+  text-align:center;
+  font-family:'Oswald', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  color: var(--muted);
+  margin: 18px 0 26px;
+}
+h1{
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-image: linear-gradient(90deg, transparent, var(--line), transparent) 1;
+  border-bottom: 3px solid transparent;
+}
+
+/* Navbar – glassy + sticky */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(0deg, rgba(32,37,58,.72), rgba(32,37,58,.72));
+  border-bottom: 1px solid #2f3b7a;
+  box-shadow: var(--shadow);
+  padding: 10px 0;
+  animation: navSlide .5s ease-out both;
+}
+@keyframes navSlide{from{opacity:0; transform: translateY(-8px)} to{opacity:1; transform: translateY(0)}}
+
+.navbar ul{margin:0; padding:0; list-style:none; text-align:center}
+.navbar li{display:inline-block; margin: 0 14px}
+.navbar a{
+  color: var(--muted);
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  padding:6px 10px;
+  border-radius:10px;
+  transition: transform .15s ease, color .2s, background .2s;
+}
+.navbar a:hover{
+  color:white;
+  background: #2a3566;
+  transform: translateY(-1px);
+}
+
+/* Layout: Cases */
+.cases-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+  margin: 14px auto 22px;
+}
+
+.case-column, .case-column2{
+  flex: 1 1 320px;
+  max-width: 520px;
+  background: linear-gradient(180deg, var(--card), #1d2135);
+  border-radius: var(--radius);
+  border: 1px solid #2c3a84;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  position: relative;
+  overflow:hidden;
+  isolation:isolate;
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+.case-column::before,
+.case-column2::before{
+  content:"";
+  position:absolute; inset:-1px;
+  border-radius: inherit;
+  background: conic-gradient(from 90deg, transparent 0 75%, rgba(106,132,255,.18) 85% 100%);
+  filter: blur(18px);
+  z-index:-1;
+}
+
+@keyframes cardFloat{
+  0%,100%{transform: translateY(0)}
+  50%{transform: translateY(-6px)}
+}
+
+.case-column h2{
+  text-align:center;
+  font-family:'Oswald',sans-serif;
+  font-weight:700;
+  font-size:26px;
+  color:var(--muted);
+  margin: 4px 0 12px;
+}
+
+/* ======= TABLE (KEPT THE SAME) ======= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #2c2f3f; /* เทาเข้ม */
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #4a5f94;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+th {
+    background: #37415c;
+    color: #b0c7f5;
+    font-weight: bold;
+}
+tr:nth-child(even) { background-color: #303446; }
+tr:hover {
+    background-color: #3b4155;
+    color: #ffffff;
+}
+/* ซ่อนคอลัมน์ที่ไม่ต้องการแสดง */
+table th:nth-child(2), table td:nth-child(2),
+table th:nth-child(4), table td:nth-child(4),
+table th:nth-child(5), table td:nth-child(5),
+table th:nth-child(6), table td:nth-child(6) { display:none; }
+/* ======= END TABLE (UNCHANGED) ======= */
+
+/* Buttons – new micro-interactions */
+button{
+  display:block;
+  margin: 18px auto;
+  padding: 12px 26px;
+  font-size: 17px;
+  font-weight: 800;
+  font-family:'Oswald', sans-serif;
+  color:#fff;
+  background:
+    linear-gradient(180deg, #3c4e9e, #2f3d85);
+  border: 1px solid #4257c4;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(66,87,196,.35);
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+button::after{
+  /* ripple highlight */
+  content:"";
+  position:absolute;
+  inset: 0;
+  background: radial-gradient(120px 120px at var(--x,50%) var(--y,50%), rgba(255,255,255,.22), transparent 55%);
+  opacity:0;
+  transition: opacity .25s ease;
+  pointer-events:none;
+}
+button:hover{ transform: translateY(-1px); filter: brightness(1.05)}
+button:active{ transform: translateY(0); }
+button:hover::after{ opacity:1; }
+
+/* Case Summary – subtle scanline */
+.case-summary{
+  white-space: pre-wrap;
+  margin-top:16px;
+  padding:16px;
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, #21263a, #1a1f33);
+  border: 1px solid #32408f;
+  position: relative;
+  overflow:hidden;
+}
+.case-summary::before{
+  content:"";
+  position:absolute; left:0; right:0; top:-50%;
+  height:200%;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.05) 0 2px,
+      transparent 2px 6px
+  );
+  mix-blend-mode: overlay;
+  animation: scan 6s linear infinite;
+  pointer-events:none;
+}
+@keyframes scan{
+  from{ transform: translateY(0) }
+  to{ transform: translateY(20px) }
+}
+
+/* Scroll reveal utility */
+.fade-in{opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease}
+.fade-in.show{opacity:1; transform: translateY(0)}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  body{ padding: 16px }
+  .cases-container{ gap:12px }
+  .case-column,.case-column2{ padding:14px }
+  button{ width:100% }
+}
+/* === Tone from image: UP TOWN Blue Nebula === */
+:root{
+  --bg-1:#080E17;
+  --bg-2:#09162E;
+  --card:#0C1F4E;
+  --ink:#E8F3FF;     /* ตัวอักษรหลัก */
+  --muted:#9FBCFF;   /* ตัวอักษรรอง/หัวข้อ */
+  --primary:#1771EA; /* ไฮไลต์/ปุ่ม */
+  --primary-2:#114CD3;
+  --line:#2D54B3;    /* เส้น/ขอบ */
+}
+
+/* พื้นหลังแนวนิ้วคลื่น เหมือนออโรร่า เบาๆ */
+body{
+  color: var(--ink);
+  background:
+    radial-gradient(80% 60% at 20% 10%, rgba(23,113,234,.22), transparent 60%),
+    radial-gradient(70% 50% at 80% 25%, rgba(17,76,211,.18), transparent 65%),
+    radial-gradient(50% 35% at 60% 70%, rgba(12,31,78,.25), transparent 60%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+}
+
+/* หัวเรื่องให้อยู่ในโทนเดียวกับภาพ */
+h1, h3{
+  color: var(--muted);
+  border-bottom: 3px solid var(--line);
+}
+
+/* กล่องเคส/การ์ด */
+.case-column, .case-column2{
+  background: linear-gradient(180deg, var(--card), #111b3b);
+  border: 1px solid rgba(45,84,179,.6);
+  box-shadow: 0 10px 30px rgba(17,76,211,.25);
+}
+
+/* ปุ่ม */
+button{
+  color:#fff;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 18px rgba(23,113,234,.35);
+}
+button:hover{
+  filter: brightness(1.05);
+}
+
+/* — ตาราง “คงเดิม” แต่ให้เฉดเข้ากับโทน — */
+table{ background:#1a2344; }              /* เดิม: #2c2f3f */
+th{ background:#0C1F4E; color:#9FBCFF; }  /* เดิม: #37415c / #b0c7f5 */
+th, td{ border:1px solid var(--line); }
+tr:nth-child(even){ background-color:#172244; }
+tr:hover{ background-color:#21315f; color:#ffffff; }
+
+.navbar{
+  position:sticky; top:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 16px;
+  backdrop-filter: blur(8px);
+  background: linear-gradient(0deg, rgba(12,31,78,.72), rgba(12,31,78,.72));
+  border-bottom: 1px solid rgba(45,84,179,.6);
+  box-shadow: var(--shadow);
+}
+.navbar .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-family:'Oswald',sans-serif; letter-spacing:1px}
+.navbar nav a{
+  color:var(--muted); text-decoration:none; font-weight:700; margin-left:12px;
+  padding:6px 10px; border-radius:10px; transition:all .15s ease;
+}

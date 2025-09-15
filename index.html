@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> POLICE UPTOWN  </title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel = "icon" href ="image/LOGOPOLICE.png" type = "image/x-icon">
+        <script src="block.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+      <div class="brand">
+        <img src="image/LOGO.png" alt="Logo" width="36" height="36" />
+        <span>POLICE UPTOWN</span>
+      </div>
+      
+        
+    </header>
+	<center>	<div class="logo">
+        <img style="width: 300px; height: 300px;" src="image/LOGO.png" alt="Logo" />
+    </div></center>
+		
+    <h1>👮‍♂️ POLICE UPTOWN 👮‍♂️
+    </h1>
+<h3>Developer By.Exsos High</h3>
+
+
+
+
+        <div class="cases-container">
+            <div class="case-column">
+                <h2>คดีทั่วไป</h2>
+                <table id="criminalCasesTable">
+                    <thead>
+                        <tr>
+                            <th>เลือก</th>
+                            <th>ชื่อคดี</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="case-column">
+                <h2>คดีแดง</h2>
+                <table id="orengCasesTable">
+                    <thead>
+                        <tr>
+                            <th>เลือก</th>
+                            <th>ชื่อคดี</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="case-column">
+                <h2>คดีคูณหลบหนี</h2>
+                <table id="redCasesTable">
+                    <thead>
+                        <tr>
+                            <th>เลือก</th>
+                            <th>ชื่อคดี</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="case-column">
+                <h2>คดีที่คิดตามจำนวน</h2>
+                <table id="gdCasesTable">
+                    <thead>
+                        <tr>
+                            <th>เลือก</th>
+                            <th>ชื่อคดี</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Checkbox for insurance -->
+        <center>
+            <div class="insurance-controls">
+                
+            </div>
+        </center>
+        <button id="exportBtn">ส่งคดี</button>
+        
+        <button id="reset">RESET</button>
+
+        <script>
+          const resetBtn = document.getElementById('reset');
+        
+          resetBtn.addEventListener('click', () => {
+            location.reload(); // รีโหลดหน้าเว็บทั้งหมด
+          });
+        </script>
+
+        <div class="cases-container">
+            <div class="case-column2">
+                <h2>สำหรับคดีทั่วไป</h2>
+                <div id="caseSummary" class="case-summary"></div>
+                
+				
+                
+            </div>
+            <div class="case-column2">
+                <h2>สำหรับคดีแดง</h2>
+                <div id="caseSummary1" class="case-summary"></div>
+                
+                
+                
+                
+            </div>
+			
+                
+				
+            
+            
+                
+				
+				
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+        
+    </body>
+</html>
