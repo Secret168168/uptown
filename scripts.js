@@ -4,7 +4,7 @@
   { no: 1,  caseName: "พื้นที่สุ่มเสี่ยง",                             fine: "1,000",   jail: "10 นาที",  remark: "" },
   { no: 2,  caseName: "หลบหนีการจับกุม",                               fine: "1,500",   jail: "10 นาที",  remark: "" },
   { no: 3,  caseName: "หลบหนีนอกเมือง",                               fine: "10,000",  jail: "20 นาที",  remark: "" },
-  { no: 4,  caseName: "งัดร้าน",                  fine: "10,000",  jail: "30 นาที",  remark: "" },
+  { no: 4,  caseName: "งัดบ้าน",                  fine: "10,000",  jail: "30 นาที",  remark: "" },
   { no: 4,  caseName: "สร้างความวุ่นวาย [ ทุกกรณี ]",                  fine: "10,000",  jail: "30 นาที",  remark: "" },
   { no: 5,  caseName: "รบกวนโดยใช้เสียง",                              fine: "5,000",   jail: "30 นาที",  remark: "" },
   { no: 6,  caseName: "ปล้นเล่น",                                       fine: "30,000",  jail: "-",        remark: "" },
