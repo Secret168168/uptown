@@ -82,9 +82,9 @@
 { no: 11, caseName: "หมิ่นประมาทเจ้าหน้าที่รัฐ / ข่มขู่เจ้าหน้าที่รัฐ",      fine: "50,000",   jail: "60",      remark: "" },
 { no: 12, caseName: "Blue Key",      fine: "15,000",   jail: "15",      remark: "" },
 { no: 13, caseName: "Black Key",      fine: "30,000",   jail: "30",      remark: "" },
-{ no: 14, caseName: "Screw A",      fine: "200,000",   jail: "30",      remark: "" },
-{ no: 15, caseName: "Screw B",      fine: "200,000",   jail: "30",      remark: "" },
-{ no: 16, caseName: "Screw C",      fine: "200,000",   jail: "30",      remark: "" },
+{ no: 14, caseName: "Screw A",      fine: "30,000",   jail: "30",      remark: "" },
+{ no: 15, caseName: "Screw B",      fine: "30,000",   jail: "30",      remark: "" },
+{ no: 16, caseName: "Screw C",      fine: "30,000",   jail: "30",      remark: "" },
         ];
 
         
