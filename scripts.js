@@ -189,14 +189,14 @@ document.getElementById('exportBtn').addEventListener('click', () => {
           fine = 30000 * quantity;
           jailTime = 30;
       }else if (caseName === "Screw A") {
-          fine = 200000 * quantity;
+          fine = 30000 * quantity;
           jailTime = 30;
       }
       else if (caseName === "Screw B") {
-          fine = 200000 * quantity;
+          fine = 30000 * quantity;
           jailTime = 30;
       }else if (caseName === "Screw C") {
-          fine = 200000 * quantity;
+          fine = 30000 * quantity;
           jailTime = 30;
       }
       }
