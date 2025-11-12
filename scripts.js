@@ -85,6 +85,11 @@
 { no: 14, caseName: "Screw A",      fine: "30,000",   jail: "30",      remark: "" },
 { no: 15, caseName: "Screw B",      fine: "30,000",   jail: "30",      remark: "" },
 { no: 16, caseName: "Screw C",      fine: "30,000",   jail: "30",      remark: "" },
+{ no: 17, caseName: "Cap P",      fine: "2,000",   jail: "10",      remark: "" },
+{ no: 18, caseName: "Cap U",      fine: "2,000",   jail: "10",      remark: "" },
+{ no: 19, caseName: "Cap T",      fine: "2,000",   jail: "10",      remark: "" },
+{ no: 20, caseName: "Drug B",      fine: "6,000",   jail: "30",      remark: "" },
+{ no: 21, caseName: "Drug A",      fine: "6,000",   jail: "30",      remark: "" },
         ];
 
         
@@ -198,7 +203,30 @@ document.getElementById('exportBtn').addEventListener('click', () => {
       }else if (caseName === "Screw C") {
           fine = 30000 * quantity;
           jailTime = 30;
+
+      } else if (caseName === "Cap P") {
+          fine = 2000 * quantity;
+          jailTime = 10;
+
+      } else if (caseName === "Cap U") {
+          fine = 2000 * quantity;
+          jailTime = 10;
+
+      } else if (caseName === "Cap T") {
+          fine = 2000 * quantity;
+          jailTime = 10;
+
+      } else if (caseName === "Drug B") {
+          fine = 6000 * quantity;
+          jailTime = 30;
+
+      } else if (caseName === "Drug A") {
+          fine = 6000 * quantity;
+          jailTime = 30;
+
       }
+       
+          
       }
 
       // สะสมเข้า "คูณได้" vs "ห้ามคูณ"
